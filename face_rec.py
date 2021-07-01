@@ -45,11 +45,11 @@ while True:
         break
     elif k % 256 == 32:
         # space is pressed
-        webcam_image = "webcam_screenshot.png"
+        # webcam_image = "webcam_screenshot.png"
         faces = haar_cascade.detectMultiScale(gray, 1.1, 4)
         for (x, y, w, h) in faces:
             cv2.rectangle(webcam, (x, y), (x + w, y + h), (255, 0, 0), 2)
-        cv2.imwrite(webcam_image, webcam)
+        # cv2.imwrite(webcam_image, webcam)
         print("Took a screenshot")
         capture.release()
         cv2.destroyAllWindows()
